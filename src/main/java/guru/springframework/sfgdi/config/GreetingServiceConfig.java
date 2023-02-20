@@ -8,6 +8,7 @@ import guru.springframework.sfgdi.services.*;
 import org.springframework.context.annotation.*;
 
 @Configuration
+@ImportResource("classpath:sfgdi-config.xml")
 @ComponentScan(basePackages = {"guru.springframework.sfgdi", "com.springframework.pets"})
 public class GreetingServiceConfig {
 
@@ -49,11 +50,6 @@ public class GreetingServiceConfig {
     @Primary
     PrimaryGreetingService primaryGreetingService() {
         return new PrimaryGreetingService();
-    }
-
-    @Bean
-    ConstructorInjectedGreetingService constructorInjectedGreetingService() {
-        return new ConstructorInjectedGreetingService();
     }
 
     @Bean
