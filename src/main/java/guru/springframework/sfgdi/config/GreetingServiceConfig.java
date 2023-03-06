@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 
 @Configuration
-@PropertySource("classpath:datasource.properties")
 @ImportResource("classpath:sfgdi-config.xml")
 @ComponentScan(basePackages = {"guru.springframework.sfgdi", "com.springframework.pets"})
 public class GreetingServiceConfig {
